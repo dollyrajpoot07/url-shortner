@@ -1,0 +1,26 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.container input {
+  padding: 0.5rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.container button {
+  padding: 0.6rem 1rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.container button:hover {
+  background-color: #125ca3;
+}
+.container a {
+  color: #1976d2;
+  text-decoration: underline;
+}
