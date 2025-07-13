@@ -7,14 +7,23 @@ This is a full-stack URL shortener built with **Next.js**, which allows users to
 ## 📁 Project Structure
 
 src/
+
 ├── pages/
+
 │ ├── api/
+
 │ │ └── shorten.js // POST API to generate short ID
+
 │ ├── [id].js // Dynamic route to handle redirection
+
 │ └── index.js // Home page with input + result
+
 ├── components/
+
 │ └── homes.js // Input box, button, result display
+
 ├── styles/
+
 │ └── homes.module.css // Basic CSS for layout
 
 ---
@@ -42,10 +51,13 @@ Request Body
 {
   "url": "https://example.com"
 }
+
 Response
 {
   "short": "http://localhost:3000/abc123"
 }
+
+
 <img width="668" height="150" alt="Screenshot 2025-07-13 at 11 57 09 PM" src="https://github.com/user-attachments/assets/dfe7b46d-16cf-4040-a584-c3daa86918ca" />
 <img width="646" height="187" alt="Screenshot 2025-07-13 at 11 57 28 PM" src="https://github.com/user-attachments/assets/f099cdbd-ec5f-4d17-8a64-3282d4cc0a44" />
 
