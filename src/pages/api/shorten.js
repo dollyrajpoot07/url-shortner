@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-const db = {};
+global.urlDB = global.urlDB || {};
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
@@ -11,12 +11,10 @@ export default function handler(req, res) {
     }
 
     const id = nanoid(6);
-    db[id] = url;
+    global.urlDB[id] = url;
 
     return res.status(200).json({ short: `${req.headers.host}/${id}` });
   }
 
   res.status(405).end();
 }
-
-export { db };

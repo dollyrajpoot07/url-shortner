@@ -1,11 +1,11 @@
-import { db } from './api/shorten';
-
 export async function getServerSideProps(context) {
   const { id } = context.params;
+
+  const db = global.urlDB || {};
   const url = db[id];
 
   if (!url) {
-    return { notFound: true }; // triggers 404
+    return { notFound: true };
   }
 
   return {
@@ -16,6 +16,6 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function Redirect() {
+export default function RedirectPage() {
   return null;
 }
